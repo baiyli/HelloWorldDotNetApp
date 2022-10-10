@@ -5,12 +5,12 @@ build:
     build:
       - dotnet restore
       - dotnet publish -c Release -o out
-  env:
-    - name: ASPNETCORE_URLS
-      value: "http://*:5000"
 run:
   runtime-version: 6.0.9
   command: dotnet out/HelloWorldDotNetApp.dll
   network:
     port: 5000
     env: APP_PORT
+  env:
+    - name: ASPNETCORE_URLS
+      value: "http://*:5000"
