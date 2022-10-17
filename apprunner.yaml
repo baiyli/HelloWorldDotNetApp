@@ -3,6 +3,7 @@ runtime: dotnet6
 build:
   commands:
     build:
+      - echo $CODEBUILD_BUILD_IMAGE
       - dotnet restore
       - dotnet publish -c Release -o out
 run:
