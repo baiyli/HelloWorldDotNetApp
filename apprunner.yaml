@@ -3,7 +3,6 @@ runtime: dotnet6
 build:
   commands:
     build:
-      - dotnet restore
       - dotnet publish -c Release -o out
 run:
   command: dotnet out/HelloWorldDotNetApp.dll
